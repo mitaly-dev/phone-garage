@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search_Phone</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+    <header>
+        <!-- navbar section start -->
+        <div class="navbar bg-[#ff5e00] px-24">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-3xl font-bold text-white">Phone Garage.</a>
+            </div>
+            <div class="flex-none">
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="./images/banner1.jpg" />
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- navbar section end -->
+
+          <!-- banner section start  -->
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full h-[80vh]">
+              <img src="./images/banner3.jpg" class="w-full object-cover" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full h-[80vh]">
+              <img src="./images/banner2.jpg" class="w-full object-cover" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full h-[80vh]">
+              <img src="./images/banner1.jpg" class="w-full object-cover" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+          <!-- banner section end-->
+    </header>
+    <main class="px-16 py-20 mt-10">
+        <section>
+            <h3 class="text-center font-bold text-4xl">Search Your Phone</h3>
+            <div class="w-2/4 relative my-12 mx-auto">
+                <input id="search-field" type="text" class="border w-full py-3 rounded-full px-5 outline-none" placeholder="Search your phone">
+                <button id="search-btn" class="btn btn-ghost btn-circle absolute right-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+            </div>
+            <div  class="grid grid-cols-4 gap-5">
+                <div class="col-span-1 border rounded-lg px-3 py-5 bg-white">
+                  <h3 class="text-center text-orange-500 font-semibold text-2xl py-2 mb-5 border-b"><span id="phone-name"></span> Phone List</h3>
+                    <ul id="phone-list">
+                        
+                    </ul>
+                </div>
+                <div class="col-span-3 ">
+                    <div id="phone-container" class="grid grid-cols-3 gap-5">
+                        
+                    </div>
+                    <div id="all-btn" class="text-center mt-10 hidden">
+                      <button class="bg-yellow-500 px-6 text-white text-lg py-3 rounded-lg text-center font-semibold">All Phone</button>
+                    </div>
+                    <div id="progress" class="text-center mt-40 items-center hidden">
+                      <div class="radial-progress" style="--value:70;">70%</div>
+                    </div>
+                    <h3 id="not-found" class="text-center text-2xl my-20 text-red-600 capitalize"></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+  <!-- button modal -->
+  <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box relative">
+      <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+      <div id="moday-body"></div>
+    </div>
+  </div>
+
+
+    <script src="./js/common.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
